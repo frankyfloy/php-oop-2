@@ -1,5 +1,5 @@
 <?php
-    include ('address.php');
+    include __DIR__.('address.php');
     use Shop;
 
     Class Carrello{
@@ -26,16 +26,14 @@
         }
 
         // Ottieni singolo prodotto nel carrello
-        public function getCart($Key){
+        public function getProduct($Key){
             return $this->$cart[$key];
         }
 
         // Somma prodotti carrello
-        public function getSum(){
-            foreach ($cart as $product) {
-                $somma += $product['price'];
-            }
-            return $somma];
+        public function getSum($key){
+            $sum = arrays_sum(arrays_column($cart,$key));
+            return $sum;
         }
     }
 ?>
