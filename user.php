@@ -1,28 +1,24 @@
 <?php
+    include ('address.php');
 
     class User{
 
-        // use Carrello;
+        use Address;
 
         protected $name;
         protected $lastname;
         protected $date_Of_Birth;
         protected $levelPoint = 0;
         protected $UserFidelity;
-        private $isBanned = false;
-
-        // protected $carrello = [];
+        protected $isBanned = false;
 
         public function __construct($name, $lastname, $date_Of_Birth){
             $this->setName($name);
             $this->setLastname($lastname);
-            $this->setDataDiNascita($date_Of_Birth);
-            $this->$levelPoint += 1;
+            $this->setDate_Of_Birth($date_Of_Birth);
         }
 
-
-        // SETTER AND GETTER
-
+        // ----------------SETTER AND GETTER---------------------
         // Name
         public function setName($name){
             $this->$name = $name;
@@ -56,36 +52,14 @@
         }
 
         public function getisBanned(){
-            return $this->$isBanned
+            return $this->$isBanned;
         }
 
-        // public function insertFattura($fattura){
-        //     $this->$fatture[] = $fattura;
-        // }
-        //
-        // public function getFatture(){
-        //     return $this->$fatture;
-        // }
-
-        // public function insertArrAssociativo($Key,$value){
-        //     $this->$$arrAssociativo[$key] = $value;
-        // }
-        //
-        // public function getArrAssociativo(){
-        //     return $this->$arrAssociativo;
-        // }
-
-
-
-        // public function getLevel(){
-        //     return $this->$level;
-        // }
     }
 
     $utente = new User('Francesco','Sica','02/03/1991');
     var_dump($utente);
 ?>
-
 
 <!-- public function setLevel($point){
 
