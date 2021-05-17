@@ -56,9 +56,6 @@
         }
 
     }
-
-    $utente = new User('Francesco','Sica','02/03/1991');
-    var_dump($utente);
 ?>
 
 <!-- public function setLevel($point){

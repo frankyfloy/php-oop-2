@@ -2,14 +2,16 @@
 
     class Product{
 
-        protected $name;
+        protected $brand;
+        protected $type;
         protected $descr;
         protected $codProd;
         protected $category;
         protected $price;
 
-        public function __construct($name, $descr, $category){
-            $this->setName($name);
+        public function __construct($brand, $type, $descr,$codProd, $category,$price){
+            $this->setBrand($brand);
+            $this->setType($type);
             $this->setDescription($descr);
             $this->setCodProd($codProd);
             $this->setCategory($category);
@@ -17,13 +19,22 @@
         }
 
         // ----------------SETTER AND GETTER---------------------
-        // Name
-        public function setName($name){
-            $this->$name = $name;
+        // Brand
+        public function setBrand($brand){
+            $this->$brand = $brand;
         }
 
-        public function getName(){
-            return $this->$name;
+        public function getBrand(){
+            return $this->$brand;
+        }
+
+        // Type
+        public function setType($type){
+            $this->$type = $type;
+        }
+
+        public function getType(){
+            return $this->$type;
         }
 
         // Description
